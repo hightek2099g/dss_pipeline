@@ -20,7 +20,7 @@ pipeline {
                 withPythonEnv('python3') {
                     bat "pip install -U pip"
                     bat "pip install -r requirements.txt"
-                    bat "pytest -s 1_project_validation/run_test.py -o junit_family=xunit1 --host='${https://api-23185367-6220f0a2-dku.us-east-1.app.dataiku.io}' --api='${W4p8eyvLPkZql7zP51xz4eQcUcaOL4Sv}' --project='${DKU_CHURN}' --junitxml=reports/PROJECT_VALIDATION.xml"
+                    bat """pytest -s 1_project_validation/run_test.py -o junit_family=xunit1 --host='${https://api-23185367-6220f0a2-dku.us-east-1.app.dataiku.io}' --api='${W4p8eyvLPkZql7zP51xz4eQcUcaOL4Sv}' --project='${DKU_CHURN}' --junitxml=reports/PROJECT_VALIDATION.xml"""
                 }
             }
         }
